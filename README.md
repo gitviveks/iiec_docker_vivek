@@ -29,10 +29,15 @@ docker-compose
   in that file put the following text.
   
   >[docker]
-  baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
-  gpgcheck=0
+  >baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
+  >gpgcheck=0
   
   after putting the above content in that file ,save that file and run following command
   >yum install docker-ce
   
   >systemctl enable docker
+  
+ - Here docker is reday to use. I then installed appropriate MySQL and WordPress image
+  >docker pull mysql:5.7
+  
+  >docker pull wordpress:5.1.1-php7.3-apache
