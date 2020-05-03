@@ -1,2 +1,1 @@
-# iiec_docker_vivek
-IIEC Docker Project Repo
+# Project - Blog/Article on WordPress container using MySQL container as a webserver host  
