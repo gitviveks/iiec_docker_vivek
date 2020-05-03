@@ -2,7 +2,7 @@
 # Inroduction:
   With the rise of new technologies and idustries, old approach fails to stand strong where we have to wait so long (about 30-60mins) for setting up the new environment. There are multiple real cases where we have set the environment for a specific task, destroy it after use and again set lots of systems at large scale to deliver industry needs. It is hard to achieve it by normal way where we wait upto 1hr to launch a OS.
   Here Solomon Hykes came up with the idea of Docker where we can lauch any environment is just 1 second. Docker uses containerization technology for this. We have to set just configuration and docker will set it ready to use in just 1 second. Using this great technolgoy I developed a project under the mentorship of Mr. Vimal Daga Sir.
- This project based on multi-tier architecture and use concept of 
+ This project based on multi-tier architecture and use concept of docker-compose (Infrastructure as a code) to launch automatic.
  
  # Requirements:
 Bare Metal OS (Windows),
@@ -20,14 +20,13 @@ docker-compose
 # Setting up the encironment
 - First installed Virtual Box on windows as a virtualization tool. On the top of Vitual Box installed RHEL 8 OS
 - In Red Hat 8 Docker CE is installed using a manul created repo as RHEL 8 does not support CE
-  change directory  
+  *change directory*
   >cd /etc/yum.repos.d/
   
-  create a file 
+  *create a file* 
   >gedit docker.repo
   
-  in that file put the following text.
-  
+  in that file put the following text
   >[docker]
   >baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
   >gpgcheck=0
@@ -49,4 +48,21 @@ docker-compose
   >chmod +x /usr/local/bin/docker-compose
   
   To compose YAML-
-  >mkdir mycompose #change directory
+  *make directory*
+  >mkdir mycompose 
+  
+  *change directory*
+  >cd /mycompose
+  
+  *write yml file*
+  >vim docker-compose.yml
+  
+  yml file code attattched above as docker-compose.yml
+ 
+- Launch the configured environment in just a second
+  >docker-compose up
+  
+  *cross check for containers - we can see both container are running*
+  >docker ps
+ 
+- Here our environment is ready to use. Use system IP and port 8081 to use WordPress
