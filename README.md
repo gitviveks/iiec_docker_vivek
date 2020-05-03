@@ -37,7 +37,7 @@ docker-compose
   
   >systemctl enable docker
   
- - Here docker is reday to use. I then installed appropriate MySQL and WordPress image
-  >docker pull mysql:5.7
+- Here docker is reday to use. I then installed appropriate MySQL and WordPress image
+   >docker pull mysql:5.7
   
-  >docker pull wordpress:5.1.1-php7.3-apache
+   >docker pull wordpress:5.1.1-php7.3-apache
