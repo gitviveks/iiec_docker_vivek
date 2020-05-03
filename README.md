@@ -41,3 +41,12 @@ docker-compose
    >docker pull mysql:5.7
   
    >docker pull wordpress:5.1.1-php7.3-apache
+- setting up **docker-compose** to lauch all the setup evvironment in one go
+  First download docker-compose
+  >curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  
+  Apply executable permissions to the binary
+  >chmod +x /usr/local/bin/docker-compose
+  
+  To compose YAML-
+  >mkdir mycompose #change directory
